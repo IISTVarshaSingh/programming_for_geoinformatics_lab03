@@ -8,10 +8,10 @@ import matplotlib.pyplot as plt
 img = cv2.imread("image.jpg")
 
 if img is None:
-    print("Error: image.jpg nahi mili!")
+    print("Error: image.jpg not found")
     exit()
 
-# OpenCV BGR me read karta hai, RGB me convert
+
 image_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
 
@@ -86,7 +86,7 @@ print("Total Pixels:", height * width)
 # 4. IMAGE CROPPING
 
 
-# Image ke center ka small region
+#  small region of center of Image
 y1 = height // 4
 y2 = height // 2
 
@@ -106,7 +106,7 @@ plt.show()
 # 5. SPLIT IMAGE INTO FOUR EQUAL PARTS
 
 
-# Equal parts ke liye dimensions even karna
+#  make  the  dimensions even for equal division
 h = height - height % 2
 w = width - width % 2
 
